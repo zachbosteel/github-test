@@ -1,5 +1,7 @@
 people =[]
 
+puts "We will now record the information of five new members of our bank."
+
 5.times do
   person = {}
   puts "Please tell me the first name of this person."
