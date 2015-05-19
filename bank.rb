@@ -4,21 +4,25 @@ people =[]
   person = {}
   puts "Please tell me the first name of this person."
   firstname = gets.chomp
-  person[:first_name] = firstname
+  person["FIRST NAME"] = firstname
   puts "Please tell me the last name of this person."
   lastname = gets.chomp
-  person[:last_name] = lastname
+  person["LAST NAME"] = lastname
   puts "Please provide me with their email address."
   email = gets.chomp
-  person[:email] = email 
+  person["EMAIL"] = email 
   accntnum =[]
   10.times do
    number = rand(0..9)
    accntnum << number
   end
   accntnum = accntnum.join
-  person[:account_number] = accntnum
+  person["ACCT #"] = accntnum
   people << person
 end
 
-p people
+people.each do |person|
+  person.each do |key, value|
+    puts key + ": " + value
+  end
+end
